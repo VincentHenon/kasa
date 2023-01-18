@@ -1,0 +1,34 @@
+footer {
+    //to stick the footer to the bottom of the screen.
+    margin-top: auto;
+}
+
+.footer-cntnr {
+    width: 100%;
+    height: 210px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: $clr_dark;
+}
+
+.credits {
+    @include credits_desktop;
+    text-align: center;
+}
+
+@media only screen and (min-width: 501px) and (max-width: 700px) {
+    .credits {
+        @include credits_tablet
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .credits {
+        @include credits_mobile
+    }
+}
